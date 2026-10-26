@@ -2,7 +2,7 @@
 
 Capture the IngeTrazo viewport and redraw it with a local Stable Diffusion 1.5 model through ComfyUI. One prompt, one size, one model: a free demo of the workflow.
 
-For more control (material references, lighting looks, control maps, FLUX.2 Klein models and Nano Banana cloud rendering), see the commercial add-ons. Project page: to be added.
+For more control (material references, lighting looks, control maps, FLUX.2 Klein models and Nano Banana cloud rendering), see the commercial add-ons.
 
 ## Examples
 
@@ -42,4 +42,4 @@ The full step-by-step guide is in [INSTALL.md](INSTALL.md).
 
 GPL-3.0-or-later. See [LICENSE](LICENSE).
 
-The models are not included. The checkpoint realarchvis SD 1.5 V2 is under the CreativeML Open RAIL-M licence, and the LCM LoRA is under OpenRAIL++. Read their licences on the model pages before you use them.
+The models are not included. The checkpoint and the LoRA are each under their own licence, set by their authors. Read the licence on each model page before you use them.
