@@ -4,13 +4,13 @@ Capture the IngeTrazo viewport and redraw it with a local Stable Diffusion 1.5 m
 
 For more control (material references, lighting looks, control maps, FLUX.2 Klein models and Nano Banana cloud rendering), see the commercial add-ons.
 
-## Examples
+## Example
 
-![Lite Bridge result, square proportion](screenshots/lite_result_square.jpg)
+| Viewport capture (sent to the model) | Result |
+|---|---|
+| ![Capture](screenshots/lite_capture.jpg) | ![Result](screenshots/lite_result.jpg) |
 
-![Lite Bridge result, photo-style redraw](screenshots/lite_result_photo.jpg)
-
-Both show the Masaryk 118 house, design by Sergio Amaya, used with his permission. Results come from the free demo model.
+The house is the Masaryk 118 house, design by Sergio Amaya, used with his permission. Result from the free demo model.
 
 ## Requirements
 
