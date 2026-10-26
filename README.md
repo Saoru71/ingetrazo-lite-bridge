@@ -15,7 +15,9 @@ The house is the Masaryk 118 house, design by Sergio Amaya, used with his permis
 ## Requirements
 
 - IngeTrazo 0.5.9 or later (the version this was tested with).
+- An NVIDIA RTX card with 8 GB or 16 GB of VRAM.
 - ComfyUI running at `http://127.0.0.1:8188`.
+- Tested on Windows 11. On Linux, follow the [ComfyUI manual installation for NVIDIA cards](https://github.com/comfy-org/comfyui#nvidia).
 - The checkpoint `realarchvis_sd15V2.safetensors` in `ComfyUI/models/checkpoints/` and the LoRA `lcm-lora-sdv1-5.safetensors` in `ComfyUI/models/loras/`. The plugin can download them for you. Optional: `RealESRGAN_x4plus.pth` in `ComfyUI/models/upscale_models/` for the 2x upscale.
 
 ## Install

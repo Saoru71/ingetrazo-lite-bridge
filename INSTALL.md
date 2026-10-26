@@ -19,7 +19,9 @@ Plus ComfyUI itself.
 ## Requirements
 
 - **IngeTrazo** 0.x, with its plugin folder.
-- **ComfyUI** running at `http://127.0.0.1:8188`. Install it from the ComfyUI site and start it once.
+- **Graphics card:** an NVIDIA RTX card with 8 GB or 16 GB of VRAM.
+- **ComfyUI** running at `http://127.0.0.1:8188`. On Windows, download the portable build: [ComfyUI_windows_portable_nvidia.7z](https://github.com/comfyanonymous/ComfyUI/releases/latest/download/ComfyUI_windows_portable_nvidia.7z). Extract it, run `run_nvidia_gpu.bat`, and leave it running.
+- **Tested on Windows 11.** On Linux, follow the [ComfyUI manual installation for NVIDIA cards](https://github.com/comfy-org/comfyui#nvidia).
 - **realarchvis SD 1.5 V2** in `ComfyUI/models/checkpoints/`, with the file name `realarchvis_sd15V2.safetensors`. Download it from <https://huggingface.co/75dhsx/jjhuang>.
 - **LCM LoRA for SD 1.5** in `ComfyUI/models/loras/`, with the file name `lcm-lora-sdv1-5.safetensors`. Download it from <https://huggingface.co/latent-consistency/lcm-lora-sdv1-5>.
 
