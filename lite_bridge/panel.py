@@ -151,6 +151,10 @@ class LitePanel(QWidget):
         self.prompt = QPlainTextEdit(workflow.DEFAULT_PROMPT)
         self.prompt.setFixedHeight(80)
         gen_layout.addWidget(self.prompt)
+        gen_layout.addWidget(QLabel("Negative prompt (what to avoid; empty uses the default)"))
+        self.negative = QPlainTextEdit(workflow.NEGATIVE)
+        self.negative.setFixedHeight(50)
+        gen_layout.addWidget(self.negative)
 
         row = QHBoxLayout()
         row.addWidget(QLabel("Longest side (px)"))
@@ -243,6 +247,7 @@ class LitePanel(QWidget):
         self.server.setText(s.value("server", self.server.text()))
         self.comfy_folder.setText(s.value("comfy_folder", ""))
         self.prompt.setPlainText(s.value("prompt", self.prompt.toPlainText()))
+        self.negative.setPlainText(s.value("negative", self.negative.toPlainText()))
         self.max_side.setValue(int(s.value("max_side", self.max_side.value())))
         self.aspect.setCurrentIndex(max(0, self.aspect.findData(s.value("aspect", "VIEW"))))
         self.change.setValue(float(s.value("change", self.change.value())))
@@ -254,6 +259,7 @@ class LitePanel(QWidget):
         s.setValue("server", self.server.text().strip())
         s.setValue("comfy_folder", self.comfy_folder.text().strip())
         s.setValue("prompt", self.prompt.toPlainText())
+        s.setValue("negative", self.negative.toPlainText())
         s.setValue("max_side", self.max_side.value())
         s.setValue("aspect", self.aspect.currentData())
         s.setValue("change", self.change.value())
@@ -382,6 +388,7 @@ class LitePanel(QWidget):
 
         params = {
             "prompt": self.prompt.toPlainText().strip() or workflow.DEFAULT_PROMPT,
+            "negative": self.negative.toPlainText().strip(),
             "width": width, "height": height,
             "change": self.change.value(),
             "seed": random.randint(1, 2 ** 31 - 1),

@@ -3,7 +3,7 @@
 The free version of Flux Bridge: one prompt, one size, one checkpoint. IngeTrazo calls setup(app) once at startup.
 """
 __author__ = "Alvaro Celis"
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 import logging
 

@@ -62,7 +62,7 @@ def fit_to_ratio(view_w, view_h, ratio):
 
 
 def build(params, input_name):
-    """The graph for one job. params: prompt, width, height, seed, change, upscale (bool)."""
+    """The graph for one job. params: prompt, width, height, seed, change, upscale (bool), and negative (optional; NEGATIVE when empty)."""
     wf = {
         "1": {"class_type": "LoadImage", "inputs": {"image": input_name}},
         "2": {"class_type": "ImageScale", "inputs": {
@@ -75,7 +75,7 @@ def build(params, input_name):
             "strength_model": LORA_STRENGTH, "strength_clip": LORA_STRENGTH}},
         "4": {"class_type": "VAEEncode", "inputs": {"pixels": ["2", 0], "vae": ["3", 2]}},
         "5": {"class_type": "CLIPTextEncode", "inputs": {"text": params["prompt"], "clip": ["13", 1]}},
-        "6": {"class_type": "CLIPTextEncode", "inputs": {"text": NEGATIVE, "clip": ["13", 1]}},
+        "6": {"class_type": "CLIPTextEncode", "inputs": {"text": params.get("negative", "").strip() or NEGATIVE, "clip": ["13", 1]}},
         "7": {"class_type": "KSampler", "inputs": {
             "model": ["13", 0], "seed": params["seed"], "steps": STEPS, "cfg": CFG,
             "sampler_name": SAMPLER, "scheduler": SCHEDULER, "positive": ["5", 0], "negative": ["6", 0],

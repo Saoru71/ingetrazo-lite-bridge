@@ -1,6 +1,6 @@
-# Lite Bridge for IngeTrazo: installation guide (v0.1.0)
+﻿# Lite Bridge for IngeTrazo: installation guide (v0.1.1)
 
-Lite Bridge is a free demo of the workflow. It captures the IngeTrazo viewport, sends it to your local ComfyUI server, and redraws it with one Stable Diffusion 1.5 checkpoint, **realarchvis SD 1.5 V2**, and an **LCM LoRA** that speeds up sampling. It has one prompt, one size setting and one "how much to change" setting.
+Lite Bridge is the free version of Flux Bridge. It captures the IngeTrazo viewport, sends it to your local ComfyUI server, and redraws it with one Stable Diffusion 1.5 checkpoint, **realarchvis SD 1.5 V2**, and an **LCM LoRA** that speeds up sampling. It has one prompt, one size setting and one "how much to change" setting.
 
 It doesn't include the lighting grid, the material reference, the control maps or the other models. For those, use the full Flux Bridge.
 
@@ -19,9 +19,7 @@ Plus ComfyUI itself.
 ## Requirements
 
 - **IngeTrazo** 0.x, with its plugin folder.
-- **Graphics card:** an NVIDIA RTX card with 8 GB or 16 GB of VRAM.
-- **ComfyUI** running at `http://127.0.0.1:8188`. On Windows, download the portable build: [ComfyUI_windows_portable_nvidia.7z](https://github.com/comfyanonymous/ComfyUI/releases/latest/download/ComfyUI_windows_portable_nvidia.7z). Extract it, run `run_nvidia_gpu.bat`, and leave it running.
-- **Tested on Windows 11.** On Linux, follow the [ComfyUI manual installation for NVIDIA cards](https://github.com/comfy-org/comfyui#nvidia).
+- **ComfyUI** running at `http://127.0.0.1:8188`. Install it from the ComfyUI site and start it once.
 - **realarchvis SD 1.5 V2** in `ComfyUI/models/checkpoints/`, with the file name `realarchvis_sd15V2.safetensors`. Download it from <https://huggingface.co/75dhsx/jjhuang>.
 - **LCM LoRA for SD 1.5** in `ComfyUI/models/loras/`, with the file name `lcm-lora-sdv1-5.safetensors`. Download it from <https://huggingface.co/latent-consistency/lcm-lora-sdv1-5>.
 
@@ -44,7 +42,7 @@ The folder should end up as `plugins/lite_bridge/__init__.py`, with the other fi
 
 ## Step 3: Generate
 
-1. Write the prompt. The default describes an architectural visualisation with natural daylight.
+1. Write the prompt. The default describes an architectural visualisation with natural daylight. The **Negative prompt** box lists what to avoid, such as blur, cartoon look or wireframe lines. It starts with a default list; clear it to use that default.
 2. Set the **Longest side**. The view keeps its own shape. 768 px is a good start on an 8 GB card. Sides are rounded to multiples of 8. Then choose **Proportion** to crop the capture to a shape such as 1:1, 4:3 or 16:9, so the result shows only that frame. **Viewport** keeps the shape of the view.
 3. Set **How much to change**. The default is 0.4, which keeps the building and pool in place and still adds shading and materials. Lower values (0.3) keep more of the view but look more like a line drawing. Higher values (0.6 and up) change the layout.
 4. Optional: tick **Upscale 2x with Real-ESRGAN**. The result is then twice the size, for example 1536 px instead of 768 px. It needs the upscaler file from step 2.

@@ -2,7 +2,7 @@
 
 Capture the IngeTrazo viewport and redraw it with a local Stable Diffusion 1.5 model through ComfyUI. One prompt, one size, one model: a free demo of the workflow.
 
-For more control (material references, lighting looks, control maps, FLUX.2 Klein models and Nano Banana cloud rendering), see the commercial add-ons.
+For advanced rendering options (material references, lighting looks, control maps, and higher-quality models), there are commercial versions: Flux and Nano Banana.
 
 ## Example
 
@@ -24,7 +24,7 @@ The house is the Masaryk 118 house, design by Sergio Amaya, used with his permis
 
 Easiest: install it from the IngeTrazo catalog, under **Extensiones > Gestionar extensiones**.
 
-Manual: download `ingetrazo_lite_bridge-0.1.0.zip` from the release page, unzip it, and copy the `lite_bridge` folder into your IngeTrazo plugins folder (**Extensiones > Abrir carpeta de complementos**). Restart IngeTrazo.
+Manual: download `ingetrazo_lite_bridge-0.1.1.zip` from the release page, unzip it, and copy the `lite_bridge` folder into your IngeTrazo plugins folder (**Extensiones > Abrir carpeta de complementos**). Restart IngeTrazo.
 
 The full step-by-step guide is in [INSTALL.md](INSTALL.md).
 
