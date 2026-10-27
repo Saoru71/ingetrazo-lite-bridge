@@ -28,7 +28,7 @@ Plus ComfyUI itself.
 1. Copy the `lite_bridge` folder into the IngeTrazo plugins folder:
    - **Windows:** `%APPDATA%\ingetrazo\plugins\`
    - Or open **Extensions > Open plugins folder** in IngeTrazo.
-2. If you already have an older copy of `lite_bridge`, delete it first, so the plugin doesn't load twice.
+2. If you already have an older copy of `lite_bridge`, delete it first, so the plugin doesn't load twice. The same goes for an install from the catalog, which appears as `ingetrazo_lite_bridge`: keep one copy only.
 3. Restart IngeTrazo. If the plugin shows ⚠, hover over it to see the error.
 
 The folder should end up as `plugins/lite_bridge/__init__.py`, with the other files beside it.
